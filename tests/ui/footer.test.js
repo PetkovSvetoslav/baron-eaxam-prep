@@ -1,10 +1,9 @@
 const { test, expect } = require('@playwright/test');
 
-test('Check home page', async ({ page }) => {
-    await page.goto('http://localhost:8080/');
-    const heading = await page.$('h1');
-    const text = await heading.textContent();
-    expect(text).toContain("Boardgames Collection");  
+test('Check footer', async ({ page }) => {
+    await page.goto('http://localhost:8080');  
+    const footer = await page.$('footer');
+    const text = await footer.textContent();
+    expect(text).toContain("© 2023 - Software Engineering and DevOps regular exam");
   });
-  
   
